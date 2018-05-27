@@ -15,7 +15,7 @@ import sys
 # importing unicode_literals (above). spawnu accepts Unicode input and
 # unicode_literals makes all string literals in this script Unicode by default.
 # child = pexpect.spawnu('cadaver http://localhost:8000')
-child = pexpect.spawn('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout private/selfsigned.key -out nginx-selfsigned.crt')
+child = pexpect.spawn('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout private/selfsigned.key -out selfsigned.crt')
 # child.logfile = sys.stdout
 child.logfile_read = sys.stdout
 # child.expect('^Country Name .*:$')
