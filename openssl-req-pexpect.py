@@ -18,7 +18,8 @@ import sys
 child = pexpect.spawn('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout private/selfsigned.key -out nginx-selfsigned.crt')
 # child.logfile = sys.stdout
 child.logfile_read = sys.stdout
-child.expect('^Country Name .*:$')
+# child.expect('^Country Name .*:$')
+child.expect('Country Name .*')
 child.sendline('')
 # child.expect('dav:!> ')
 # child.sendline('help')
