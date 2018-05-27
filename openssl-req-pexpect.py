@@ -19,9 +19,9 @@ child = pexpect.spawn('openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyo
 # child.logfile = sys.stdout
 child.logfile_read = sys.stdout
 # child.expect('^Country Name .*:$')
-child.expect('^Country Name .*')
+child.expect('Country Name .*:$')
 child.sendline('')
-child.expect('^State or Province Name .*')
+child.expect('State or Province Name .*')
 child.sendline('')
 # child.expect('dav:!> ')
 # child.sendline('help')
