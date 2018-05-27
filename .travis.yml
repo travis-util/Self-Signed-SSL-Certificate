@@ -6,6 +6,7 @@ script:
 - install --directory private
 # - openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout private/selfsigned.key -out selfsigned.crt
 - python openssl-req-pexpect.py
+- chmod u+r,u-wx,g-rwx,o-rwx private/selfsigned.key # Could be made in pexpect.
 - openssl dhparam -out dhparam.pem 2048
 
 after_script:
